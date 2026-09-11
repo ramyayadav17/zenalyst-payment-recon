@@ -1,0 +1,16 @@
+.gradle/
+build/
+out/
+bin/
+.idea/
+*.iml
+*.log
+.DS_Store
+*.class
+.classpath
+.project
+.settings/
+src/main/resources/application-local.yml
+.env
+*.pem
+*.key

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: zenalyst-payment-recon
+  datasource:
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/zenalyst_recon?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USER:zenalyst}
+    password: ${DB_PASSWORD:Zenalyst@123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+
+server:
+  port: ${SERVER_PORT:8080}
+
+recon:
+  auto-match-threshold: 70
+  review-threshold: 40
+  bounce-recovery-days: 5
+  grace-days-before-default: 7
+  demo-data:
+    enabled: true
+
+logging:
+  level:
+    com.zenalyst.recon: INFO
